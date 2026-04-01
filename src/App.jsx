@@ -8,7 +8,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import Process from './components/Process';
 import Team from './components/Team';
-// (Import your other components like Portfolio, Testimonials, Footer here)
+import CustomCursor from './components/CustomCursor';
 
 function App() {
   // State to control whether the website is "loading" or ready
@@ -24,7 +24,14 @@ function App() {
   }, [isLoading]);
 
   return (
-    <div className="font-sans antialiased text-gray-900 bg-white">
+    // Updated to use your new custom 'surface' and 'dark' colors, and prevents side-scrolling
+    <div className="font-sans antialiased text-dark bg-surface overflow-x-hidden">
+      
+      {/* The Magnetic Cursor (Hidden on mobile screens) */}
+      <div className="hidden lg:block">
+        <CustomCursor />
+      </div>
+
       {/* AnimatePresence allows the Preloader to animate OUT when it unmounts */}
       <AnimatePresence mode="wait">
         {isLoading && <Preloader setLoading={setIsLoading} />}
@@ -36,7 +43,6 @@ function App() {
         <Services />
         <Process />
         <Team />
-        {/* Add your other components here */}
       </main>
     </div>
   );

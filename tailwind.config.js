@@ -6,20 +6,20 @@ export default {
   ],
   theme: {
     extend: {
-      // This applies the premium Agntix-style font to your whole website
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
       },
-      // Your custom Invigix brand colors
       colors: {
-        primary: "#4F46E5",   // Tailwind's indigo-600
-        secondary: "#9333EA", // Tailwind's purple-600
-        dark: "#111827",      // Tailwind's gray-900
-        light: "#F8F9FA",     // The custom off-white background
+        // Your custom Coolors palette
+        primary: "#28536b",   // Dark Slate Blue
+        secondary: "#c2948a", // Dusty Rose
+        accent: "#7ea8be",    // Light Blue
+        surface: "#f6f0ed",   // Warm Off-white background
+        muted: "#bbb193",     // Khaki / Muted Gold
+        dark: "#173140",      // A darker version of primary for heavy text
       },
-      // Custom gradient class for text and backgrounds
       backgroundImage: {
-        'gradient-brand': 'linear-gradient(to right, #4F46E5, #9333EA)',
+        'gradient-brand': 'linear-gradient(to right, #28536b, #7ea8be)',
       }
     },
   },
